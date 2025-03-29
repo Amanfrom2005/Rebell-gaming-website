@@ -1,6 +1,6 @@
 # Rebell Gaming Website 🎮
 
-![Website Preview](./images/home.png)
+![Website Preview](./images/readme.png)
 
 Welcome to the Rebell Gaming Website – an ultimate theme designed for gamers, clans, guilds, esports teams, and gaming communities. This project combines modern design with powerful functionalities to create an engaging gaming platform.
 
