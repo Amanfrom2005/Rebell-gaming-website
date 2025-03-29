@@ -1,5 +1,8 @@
 # Rebell-gaming-website
 This web project is made by Aman Prajapati and Tariq Chaudhary. An ultimate theme for gamers—perfect for clans, guilds, esports teams, and gaming communities. This theme combines modern design with powerful functionalities.
+
+<img src="./images/home.png/" alt="home">
+
 <h1 align="center">hellooo every one this is aman and tariq</h1>
 <h3 align="center">A passionate frontend developers from India</h3>
 
