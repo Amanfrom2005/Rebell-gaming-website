@@ -1,11 +1,111 @@
-*{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-family: "Oxanium", sans-serif;
 }
-body{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo */
+.header-container .logo {
+  margin: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo a img {
+  width: 100%;
+  height: 26px;
+}
+
+/* nav */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 22px;
+  font-weight: bolder;
+  font-size: 16px;
+  padding: 38px 18px;
+}
+nav ul li a:hover{
+  color: #fff20e;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover i{
+  color: #fff20e;
+  transition: all 0.3s ease;
+}
+nav ul li a i {
+  padding-left: 4px;
+}
+
+/* button */
+.button {
+  display: inline-block;
+  margin: 20px;
+}
+
+.button button {
+  border: none;
+  margin-right: 20px;
+  background-color: transparent;
+}
+
+.button button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 34px;
+  background-color: #0c0c0c;
+  border: 1px solid #ffffff33;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 40%);
+}
+
+.button button svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff20e;
+  transition: fill 0.3s ease;
+}
+
+.button button a h1 {
+  color: #fff20e;
+  font-family: "Oxanium", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.button button a:hover {
+  background-color: #fff20e;
+  border-color: #fff20e;
+}
+
+.button button a:hover h1 {
+  color: #0c0c0c !important;
+}
+
+.button button a:hover svg {
+  fill: #0c0c0c !important;
 }
