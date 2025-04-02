@@ -37,24 +37,403 @@ nav ul {
   justify-content: center;
   align-items: center;
 }
-
+nav ul li {
+  position: relative;
+}
 nav ul li a {
+  display: block;
   font-size: 22px;
   font-weight: bolder;
   font-size: 16px;
   padding: 38px 18px;
 }
-nav ul li a:hover{
+nav ul li a:hover {
   color: #fff20e;
   transition: all 0.3s ease;
 }
-nav ul li a:hover i{
+nav ul li a:hover i {
   color: #fff20e;
   transition: all 0.3s ease;
 }
 nav ul li a i {
   padding-left: 4px;
 }
+nav ul li .home {
+  top: 100%;
+  left: -250%;
+  width: 1200px;
+  display: none;
+}
+nav ul li .home li {
+  display: flex;
+  align-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  padding: 20px 0px;
+}
+nav ul li .home a {
+  padding: 0;
+  position: relative;
+  display: inline-block;
+}
+nav ul li .home a img {
+  width: 360px;
+  height: 100%;
+}
+.hover-title {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff20e;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path 0.3s ease, opacity 0.3s ease;
+}
+.hover-title span {
+  color: #000;
+  font-size: 18px;
+}
+
+nav ul li .home a:hover .hover-title {
+  opacity: 1;
+  clip-path: circle(100% at 50% 50%);
+}
+nav ul li ul {
+  display: none;
+  min-width: 260px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 26px 0;
+  background: #232323;
+  z-index: 1000;
+  animation: fadeIn 0.8s ease;
+}
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul li ul li {
+  width: 100%;
+}
+
+nav ul li ul li a {
+  padding: 11px 42px;
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li ul li a i {
+  transform: rotate(270deg);
+}
+
+nav ul li ul li a:hover {
+  color: #fff20e;
+  transition: all 0.3s ease;
+}
+nav ul li ul li a:hover i {
+  color: #fff20e;
+  transition: all 0.3s ease;
+}
+nav ul li ul li a h1 {
+  color: #fff20e;
+  font-family: "Oxanium", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+nav ul li ul li a i {
+  padding-left: 4px;
+}
+
+nav ul li ul li ul {
+  display: none;
+  min-width: 260px;
+  position: absolute;
+  top: 0%;
+  left: 102%;
+  padding: 26px 0;
+  background: #232323;
+  z-index: 1000;
+  animation: fadeIn 0.8s ease;
+}
+
+nav ul li ul li:hover > ul {
+  display: block;
+}
+nav ul li ul li ul li {
+  width: 100%;
+}
+
+nav ul li ul li .shop-title {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px 0px;
+}
+nav ul li ul li .shop-title:hover {
+  color: #ffffff;
+}
+nav ul li .shop {
+  top: 100%;
+  left: -700%;
+  width: 1200px;
+  display: none;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.shop-item-list {
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+}
+.shop-item-top {
+  width: 300px;
+}
+.shop-item {
+  display: flex;
+  flex-direction: column;
+}
+.shop-item-name {
+  padding-top: 10px;
+}
+.shop-item-name a {
+  padding: 10px 0 20px 0;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.shop-item-name i {
+  color: #fff20e;
+}
+.shop-item-name .shop-item-price {
+  color: #fff20e;
+  font-size: 20px;
+}
+.shop-item-top-1 {
+  margin: 0px 20px;
+}
+.shop-item-top .shop-link {
+  padding: 10px 0px;
+}
+.shop-item-top .Product {
+  display: flex;
+  flex-direction: column;
+}
+.Product {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 300px; /* Set a specific width for the product container */
+  overflow: hidden; /* Ensures the absolute positioned elements do not overflow */
+}
+
+.Product img {
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden elements initially */
+.shop-item-heart,
+.shop-item-compare,
+.shop-item-add {
+  position: absolute;
+  right: 0%;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Positions */
+.shop-item-heart {
+  background-color: #fff20e;
+  top: 6%;
+  right: -6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop-item-heart i{
+  color: #000;
+  padding: 0;
+  font-size: 20px;
+  transform: rotate(0deg);
+}
+.shop-item-compare {
+  background-color: #fff20e;
+  top: 18%;
+  right: -6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop-item-compare i{
+  color: #000;
+  padding: 0;
+  font-size: 20px;
+  transform: rotate(0deg);
+} 
+.shop-item-add {
+  bottom: 0%;
+  left: 50%;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oxanium", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  background: #4a4a4a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Product:hover .shop-item-add {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.shop-item-add:hover{
+  background: #fff20e;
+  color: #000;
+  transition: all 0.5s ease;
+}
+/* Show elements when hovering on the product */
+.Product:hover .shop-item-heart,
+.Product:hover .shop-item-compare,
+.Product:hover .shop-item-add {
+  opacity: 1;
+  transform: translate(-50%, -10px);
+}
+
+/* contact */
+.contact ul {
+  top: 100%;
+  left: -700%;
+  width: 1200px;
+  justify-content: space-between;
+  background-color: #181818;
+  color: white;
+  padding: 40px;
+}
+.contact .contact-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+.contact li {
+  /* width: 30%; */
+  height: 400px;
+}
+.contact .contact-1{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.content-address {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.content-email {
+  color: yellow;
+  font-weight: bold;
+}
+
+.content-number {
+  color: yellow;
+  font-weight: bold;
+}
+
+.content-icon i {
+  font-size: 24px;
+  background: #222;
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.content-icon i:hover {
+  background: #fff20e;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.contact-2{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+}
+.content-required{
+  font-size: 16px;
+  font-weight: normal;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-3{
+  width: 32%;
+}
+input, textarea {
+  background: black;
+  border: none;
+  padding: 12px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+}
+
+textarea {
+  height: 100px;
+}
+
+.contact button {
+  width: 40%;
+  background: #fff20e;
+  color: black;
+  font-weight: bold;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.contact button:hover {
+  outline: 1px solid #ffffff33;
+  color: #fff20e;
+  background: transparent;
+}
+
+.contact iframe {
+  width: 100%;
+  height: 100%;
+}
+
 
 /* button */
 .button {
@@ -88,7 +467,7 @@ nav ul li a i {
   transition: fill 0.3s ease;
 }
 
-.button button a h1 {
+.button button a h1 { 
   color: #fff20e;
   font-family: "Oxanium", sans-serif;
   font-size: 14px;
