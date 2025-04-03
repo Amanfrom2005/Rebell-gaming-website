@@ -1,3 +1,5 @@
+
+// mobile-navigation
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector(".icon");
   const nav = document.querySelector(".mobile-nav");
@@ -29,4 +31,30 @@ document.addEventListener("DOMContentLoaded", function () {
           menuIcon.classList.remove("active");
       }
   });
+});
+
+// scroll to top button
+let lastScrollY = window.scrollY;
+const navbar = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+        // Scrolling Down - Hide Navbar
+        navbar.classList.add("hidden");
+        navbar.classList.remove("scrolled-up");
+    } else {
+        // Scrolling Up - Show Navbar with Color
+        navbar.classList.remove("hidden");
+        navbar.classList.add("scrolled-up");
+    }
+
+    // If fully scrolled to the top, remove the color
+    if (window.scrollY === 0) {
+        navbar.classList.add("remove-color");
+        setTimeout(() => {
+            navbar.classList.remove("scrolled-up", "remove-color");
+        }, 300);
+    }
+
+    lastScrollY = window.scrollY;
 });

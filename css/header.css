@@ -6,10 +6,29 @@
   text-decoration: none;
   color: white;
   font-family: "Oxanium", sans-serif;
+  transition: transform 0.4s ease-in-out;
 }
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+  z-index: 10000;
+}
+
+.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.scrolled-up {
+  background-color: #252525; /* Change navbar color */
+  transition: background-color 0.3s ease-in-out;
 }
 
 .header-container {
@@ -265,7 +284,7 @@ nav ul li .shop {
   align-items: center;
   justify-content: center;
 }
-.shop-item-heart i{
+.shop-item-heart i {
   color: #000;
   padding: 0;
   font-size: 20px;
@@ -279,12 +298,12 @@ nav ul li .shop {
   align-items: center;
   justify-content: center;
 }
-.shop-item-compare i{
+.shop-item-compare i {
   color: #000;
   padding: 0;
   font-size: 20px;
   transform: rotate(0deg);
-} 
+}
 .shop-item-add {
   bottom: 0%;
   left: 50%;
@@ -305,7 +324,7 @@ nav ul li .shop {
   opacity: 1;
   transform: translate(-50%, 0);
 }
-.shop-item-add:hover{
+.shop-item-add:hover {
   background: #fff20e;
   color: #000;
   transition: all 0.5s ease;
@@ -328,7 +347,7 @@ nav ul li .shop {
   color: white;
   padding: 40px;
 }
-.contact .contact-container{
+.contact .contact-container {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -337,7 +356,7 @@ nav ul li .shop {
 .contact li {
   height: 400px;
 }
-.contact .contact-1{
+.contact .contact-1 {
   width: 20%;
   display: flex;
   flex-direction: column;
@@ -378,13 +397,13 @@ nav ul li .shop {
   color: #000;
   transition: all 0.3s ease;
 }
-.contact-2{
+.contact-2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 400px;
 }
-.content-required{
+.content-required {
   font-size: 16px;
   font-weight: normal;
 }
@@ -393,32 +412,33 @@ form {
   flex-direction: column;
   gap: 10px;
 }
-input::placeholder{
+input::placeholder {
   color: #fff;
 }
-input:focus{
+input:focus {
   border: none;
   outline: none;
 }
-input:focus::placeholder{
+input:focus::placeholder {
   color: transparent;
   transition: all 0.3s ease;
 }
-textarea::placeholder{
+textarea::placeholder {
   color: #fff;
 }
-textarea:focus{
+textarea:focus {
   border: none;
   outline: none;
 }
-textarea:focus::placeholder{
+textarea:focus::placeholder {
   color: transparent;
   transition: all 0.3s ease;
 }
-.contact-3{
+.contact-3 {
   width: 32%;
 }
-input, textarea {
+input,
+textarea {
   background: black;
   border: none;
   padding: 12px;
@@ -455,7 +475,6 @@ textarea {
   height: 100%;
 }
 
-
 /* button */
 .button {
   display: inline-block;
@@ -488,7 +507,7 @@ textarea {
   transition: fill 0.3s ease;
 }
 
-.button button a h1 { 
+.button button a h1 {
   color: #fff20e;
   font-family: "Oxanium", sans-serif;
   font-size: 14px;
@@ -511,9 +530,9 @@ textarea {
 }
 
 /* mobile nav */
-.icon{
+.icon {
   display: none;
 }
-.mobile-nav{
+.mobile-nav {
   display: none;
 }
