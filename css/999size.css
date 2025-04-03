@@ -1,0 +1,130 @@
+@media screen and (max-width: 999px) {
+  .pc-nav {
+    display: none;
+  }
+  .button {
+    display: none;
+  }
+  .button-mobile{
+    display: block;
+    margin: 10px;
+  }
+  .icon {
+    display: block;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  /* hamburgur icon */
+  .icon {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+  }
+
+  .icon i {
+    position: absolute;
+    font-size: 30px;
+    left: 50%;
+    top: 50%;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .icon i.close {
+    opacity: 0;
+  }
+  .icon.active {
+    background-color: #fff20e;
+  }
+  .icon.active i.close {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(180deg);
+    color: #000;
+  }
+
+  .icon.active i.open {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  /* nav manu */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -80%;
+    width: 80%;
+    height: 100vh;
+    background: #111;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    padding: 30px 12px 12px 12px;
+  }
+
+  /* When Active (Opens the menu) */
+  .mobile-nav.active {
+    left: 0;
+  }
+
+  /* Navigation Links */
+  .mobile-nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .mobile-nav ul li {
+    position: relative;
+    width: 100%;
+  }
+
+  .mobile-nav ul li a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  ul li a i {
+    transition: transform 0.3s ease;
+  }
+
+
+  /* form */
+  .search-form{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .search-form input{
+    width: 90%;
+  }
+  .search-form i{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 10%;
+    width: 50px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    font-style: normal;
+    text-align: center;
+    opacity: 1;
+    transition: 0.4s;
+    pointer-events: none;
+    border-radius: 0;
+    transform: rotate(90deg);
+  }
+}

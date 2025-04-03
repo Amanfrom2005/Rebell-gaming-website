@@ -258,7 +258,7 @@ nav ul li .shop {
 
 /* Positions */
 .shop-item-heart {
-  background-color: #fff20e;
+  background-color: #4a4a4a;
   top: 6%;
   right: -6%;
   display: flex;
@@ -272,7 +272,7 @@ nav ul li .shop {
   transform: rotate(0deg);
 }
 .shop-item-compare {
-  background-color: #fff20e;
+  background-color: #4a4a4a;
   top: 18%;
   right: -6%;
   display: flex;
@@ -335,7 +335,6 @@ nav ul li .shop {
   gap: 20px;
 }
 .contact li {
-  /* width: 30%; */
   height: 400px;
 }
 .contact .contact-1{
@@ -393,6 +392,28 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+input::placeholder{
+  color: #fff;
+}
+input:focus{
+  border: none;
+  outline: none;
+}
+input:focus::placeholder{
+  color: transparent;
+  transition: all 0.3s ease;
+}
+textarea::placeholder{
+  color: #fff;
+}
+textarea:focus{
+  border: none;
+  outline: none;
+}
+textarea:focus::placeholder{
+  color: transparent;
+  transition: all 0.3s ease;
 }
 .contact-3{
   width: 32%;
@@ -487,4 +508,12 @@ textarea {
 
 .button button a:hover svg {
   fill: #0c0c0c !important;
+}
+
+/* mobile nav */
+.icon{
+  display: none;
+}
+.mobile-nav{
+  display: none;
 }

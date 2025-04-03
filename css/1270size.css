@@ -1,0 +1,80 @@
+@media screen and (max-width: 1269px) {
+  .header-container .logo {
+    margin: 12px 20px;
+  }
+  nav ul li a {
+    font-size: 12px;
+    padding: 28px 8px;
+  }
+  nav ul li .home {
+    left: -200%;
+    width: 800px;
+  }
+  nav ul li .shop {
+    left: -700%;
+    width: 800px;
+  }
+  .shop-item-list {
+    padding: 0px;
+    gap: 20px;
+  }
+  .shop-item-top {
+    width: 200px;
+  }
+  .Product {
+    width: 180px;
+  }
+  .Product img {
+    width: 180px;
+  }
+  .shop-item-heart {
+    top: 9%;
+    right: -12%;
+  }
+  .shop-item-compare {
+    top: 28%;
+    right: -12%;
+  }
+  .shop-item-add {
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+  }
+  .shop-item-name {
+    padding-top: 0px;
+  }
+  .shop-item-name i {
+    font-size: 12px;
+  }
+  .shop-item-name a {
+    padding: 10px 0 10px 0;
+    font-size: 16px;
+  }
+  .shop-item-price {
+    font-size: 16px;
+  }
+  .contact ul {
+    width: 800px;
+    padding: 20px;
+  }
+  .contact li {
+    height: 400px;
+  }
+  .contact .contact-1 {
+    width: 20%;
+    gap: 20px;
+  }
+  .content-address {
+    font-size: 12px;
+  }
+  .content-email {
+    font-size: 14px;
+  }
+  .content-number {
+    font-size: 14px;
+  }
+  .content-icon i {
+    padding: 6px;
+    font-size: 16px;
+  }
+}

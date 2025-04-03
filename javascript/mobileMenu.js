@@ -1,12 +1,32 @@
-const imageContainer = document.querySelector(".image-container");
-const hoverTitle = document.querySelector(".hover-title");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.querySelector(".icon");
+  const nav = document.querySelector(".mobile-nav");
+  const menuItems = document.querySelectorAll(".mobile-nav ul li a");
 
-imageContainer.addEventListener("mousemove", (e) => {
-  hoverTitle.style.display = "block";
-  hoverTitle.style.left = `${e.clientX}px`;
-  hoverTitle.style.top = `${e.clientY}px`;
-});
+  // Toggle sidebar visibility
+  menuIcon.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent immediate closing when clicking the icon
+      menuIcon.classList.toggle("active");
+      nav.classList.toggle("active");
+  });
 
-imageContainer.addEventListener("mouseleave", () => {
-  hoverTitle.style.display = "none";
+  // Toggle submenu visibility
+  menuItems.forEach((item) => {
+      item.addEventListener("click", function (event) {
+          let parentLi = this.parentElement;
+
+          if (parentLi.querySelector("ul")) {
+              event.preventDefault(); // Prevent navigating
+              parentLi.classList.toggle("active");
+          }
+      });
+  });
+
+  // Close sidebar when clicking outside
+  document.addEventListener("click", function (event) {
+      if (!nav.contains(event.target) && !menuIcon.contains(event.target)) {
+          nav.classList.remove("active");
+          menuIcon.classList.remove("active");
+      }
+  });
 });
