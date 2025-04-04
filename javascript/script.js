@@ -58,3 +58,20 @@ window.addEventListener("scroll", () => {
 
     lastScrollY = window.scrollY;
 });
+
+// scroll up button
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollUpBtn = document.getElementById("scroll_up");
+  
+    function handleScroll() {
+      if (window.scrollY > window.innerHeight) {
+        scrollUpBtn.classList.add("active");
+      } else {
+        scrollUpBtn.classList.remove("active");
+      }
+    }
+  
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  
