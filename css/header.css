@@ -513,11 +513,11 @@ textarea {
 }
 
 .button button a:hover h1 {
-  color: #0c0c0c !important;
+  color: #0c0c0c ;
 }
 
 .button button a:hover svg {
-  fill: #0c0c0c !important;
+  fill: #0c0c0c ;
 }
 
 /* mobile nav */
